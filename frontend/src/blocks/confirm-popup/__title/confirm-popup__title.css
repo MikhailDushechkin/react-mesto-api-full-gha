@@ -1,0 +1,16 @@
+.confirm-popup__title {
+  font-family: 'inter', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 660px) {
+  .confirm-popup__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 0 45px 0;
+  }
+}

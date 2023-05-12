@@ -1,0 +1,4 @@
+.photo-cards__like-block {
+  display: flex;
+  flex-direction: column;
+}

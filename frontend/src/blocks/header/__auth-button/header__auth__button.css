@@ -1,0 +1,16 @@
+.header__auth-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.header__auth-button:hover {
+  opacity: 0.6;
+}

@@ -1,0 +1,17 @@
+.form__save-button_type_auth {
+  background-color: #ffffff;
+  color: #000000;
+  margin-top: 216px;
+  transition: opacity 0.3s ease;
+}
+
+.form__save-button_type_auth:hover {
+  opacity: 0.85;
+}
+
+@media screen and (max-width: 660px) {
+  .form__save-button_type_auth {
+    width: 260px;
+    margin-top: 173px;
+  }
+}

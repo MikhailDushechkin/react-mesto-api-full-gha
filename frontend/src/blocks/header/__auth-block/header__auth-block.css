@@ -1,0 +1,11 @@
+.header__auth-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 660px) {
+  .header__auth-block {
+    display: none;
+  }
+}

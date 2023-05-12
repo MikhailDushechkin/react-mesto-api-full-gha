@@ -1,0 +1,23 @@
+.form_type_auth {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 358px;
+  padding: 60px 0 0 0;
+  min-height: calc(100vh - 268px - 60px);
+}
+
+@media screen and (max-width: 1023px) {
+  .form_type_auth {
+    min-height: calc(100vh - 228px - 60px);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .form_type_auth {
+    max-width: 260px;
+    padding: 40px 0 0 0;
+    min-height: calc(100vh - 186px - 40px);
+  }
+}

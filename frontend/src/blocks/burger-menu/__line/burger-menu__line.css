@@ -1,0 +1,10 @@
+.burger-menu__line {
+  width: 24px;
+  height: 3px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.burger-menu__line:last-child {
+  margin: 0;
+}

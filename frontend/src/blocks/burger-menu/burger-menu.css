@@ -1,0 +1,17 @@
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.burger-menu:hover {
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 660px) {
+  .burger-menu {
+    display: none;
+  }
+}

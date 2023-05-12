@@ -1,0 +1,15 @@
+.photo-cards__button-like {
+  background: url(../../../images/cards/cards-like.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 22px;
+  height: 19px;
+}
+
+.photo-cards__button-like:hover {
+  opacity: 0.5;
+}

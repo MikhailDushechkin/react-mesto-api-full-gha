@@ -1,0 +1,10 @@
+.form__title_type_auth {
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+  .form__title_type_auth {
+    padding: 0 0 10px 0;
+  }
+}

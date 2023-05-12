@@ -1,0 +1,24 @@
+.photo-cards__button-del {
+  background-image: url(../../../images/cards/del-button.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: unset;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  width: 18px;
+  height: 19px;
+  top: 20px;
+  right: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.photo-cards__button-del:hover {
+  opacity: 0.6;
+}
+
+.photo-cards__button-del:focus {
+  opacity: 0.6;
+}

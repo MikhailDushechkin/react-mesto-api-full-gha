@@ -1,0 +1,11 @@
+.form__input_type_auth {
+  background-color: transparent;
+  border-bottom: 2px solid #CCCCCC;
+  color: #CCCCCC;
+}
+
+@media screen and (max-width: 660px) {
+  .form__input_type_auth {
+    width: 260px;
+  }
+}
