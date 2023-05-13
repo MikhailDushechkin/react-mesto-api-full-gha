@@ -13,7 +13,7 @@ const app = express();
 
 const allowedCors = [
   'https://dmm.back.mesto.nomoredomains.monster',
-  'https://dmm.front.mesto.nomoredomains.monster',
+  'http://dmm.front.mesto.nomoredomains.monster',
   'localhost:3000',
 ];
 
