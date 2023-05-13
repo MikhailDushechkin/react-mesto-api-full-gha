@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://dmm.back.mesto.nomoredomains.monster';
 
 function checkResponse(res) {
   if (res.ok) {
