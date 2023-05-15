@@ -121,6 +121,7 @@ class Api {
 const api = new Api({
   url: BASE_URL,
   credentials: 'include',
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
     authorization: `Bearer ${ localStorage.getItem('jwt') }`,
