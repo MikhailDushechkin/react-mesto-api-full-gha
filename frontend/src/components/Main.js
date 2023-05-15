@@ -38,7 +38,7 @@ function Main(props) {
       </section>
       <section className="photo-cards">
         <ul className="photo-cards__list">
-          {!props.cards ? console.log('Пусто') : props.cards.map((card) => {
+          {props.cards.map((card) => {
             return (
               <Card
                 card={card}
