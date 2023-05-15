@@ -16,6 +16,7 @@ class Api {
   //выгрузка карточек с сервера
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
+      credentials: 'include',
       method: 'GET',
       headers: this._headers
     })
@@ -25,6 +26,7 @@ class Api {
   //добавление новой карточки
   addNewCard(data) {
     return fetch(`${this._url}/cards`, {
+      credentials: 'include',
       method: 'POST',
       headers: this._headers,
       body: JSON.stringify({
@@ -38,6 +40,7 @@ class Api {
   //удаление карточки
   deleteCard(id) {
     return fetch(`${this._url}/cards/${id}`, {
+      credentials: 'include',
       method: 'DELETE',
       headers: this._headers
     })
@@ -55,6 +58,7 @@ class Api {
   //установка лайка
   setLike(id) {
     return fetch(`${this._url}/cards/${id}/likes`, {
+      credentials: 'include',
       method: 'PUT',
       headers: this._headers
     })
@@ -64,6 +68,7 @@ class Api {
   //удаление лайка
   deleteLike(id) {
     return fetch(`${this._url}/cards/${id}/likes`, {
+      credentials: 'include',
       method: 'DELETE',
       headers: this._headers
     })
@@ -73,6 +78,7 @@ class Api {
   //получение данные профиля
   getUserData() {
     return fetch(`${this._url}/users/me`, {
+      credentials: 'include',
       method: 'GET',
       headers: this._headers
     })
@@ -82,6 +88,7 @@ class Api {
   //установка/изменение данные профиля
   setUserData(userData) {
     return fetch(`${this._url}/users/me`, {
+      credentials: 'include',
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
@@ -95,6 +102,7 @@ class Api {
   //установка/изменение аватара
   setUserAvatar(userData) {
     return fetch(`${this._url}/users/me/avatar`, {
+      credentials: 'include',
       method: 'PATCH',
       headers: this._headers,
       body: JSON.stringify({
@@ -112,6 +120,7 @@ class Api {
 
 const api = new Api({
   url: BASE_URL,
+  credentials: 'include',
   headers: {
     'Content-Type': 'application/json',
     authorization: `Bearer ${ localStorage.getItem('jwt') }`,
