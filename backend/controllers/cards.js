@@ -8,7 +8,7 @@ const createCard = (req, res, next) => {
   const owner = req.user._id;
 
   Card.create({ name, link, owner })
-    .then((card) => res.status(201).send({ data: card }))
+    .then((card) => res.status(201).send(card))
     .catch((err) => {
       if (err.name === 'ValidationError') {
         next(new BadRequestError('Переданы некорректные данные'));
@@ -20,7 +20,7 @@ const createCard = (req, res, next) => {
 
 const getCards = (req, res, next) => {
   Card.find({})
-    .then((cards) => res.status(200).send({ data: cards }))
+    .then((cards) => res.status(200).send(cards))
     .catch(next);
 };
 
@@ -34,7 +34,7 @@ const deleteCard = (req, res, next) => {
       return Card.findByIdAndDelete(req.params.cardId);
     })
     .then((card) => {
-      res.status(200).send({ data: card });
+      res.status(200).send(card);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
@@ -53,7 +53,7 @@ const likeCard = (req, res, next) => {
   )
     .then((card) => {
       if (card) {
-        res.send({ data: card });
+        res.send(card);
       } else { next(new NotFoundError('Карточка не найдена')); }
     })
     .catch((err) => {
@@ -73,7 +73,7 @@ const dislikeCard = (req, res, next) => {
   )
     .then((card) => {
       if (card) {
-        res.send({ data: card });
+        res.send(card);
       } else { next(new NotFoundError('Карточка не найдена')); }
     })
     .catch((err) => {
