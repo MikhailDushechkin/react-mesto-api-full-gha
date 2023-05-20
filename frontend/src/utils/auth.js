@@ -19,9 +19,6 @@ export const register = (email, password) => {
     }),
   })
     .then(checkResponse)
-    .then((data) => {
-      return data;
-    })
 };
 
 export const authorize = (email, password) => {
@@ -53,5 +50,4 @@ export const checkToken = (token) => {
     },
   })
     .then(checkResponse)
-    .then((data) => data)
 };
