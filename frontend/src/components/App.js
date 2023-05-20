@@ -48,7 +48,11 @@ function App() {
           setTimeout(() => navigate('/sign-in'), 1500);
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setInfoPopupOpen(true);
+        setIsSuccess(false);
+        console.log(`Возникла ошибка при регистрации ${err}`);
+      });
   }
 
   function handleLogin(email, password) {
@@ -64,7 +68,11 @@ function App() {
           navigate('/');
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setInfoPopupOpen(true);
+        setIsSuccess(false);
+        console.log(`Возникла ошибка при авторизации ${err}`);
+      });
   }
 
   function signOut() {
@@ -106,13 +114,16 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    api
+    if (loggedIn) {
+      api
       .getInitialCards()
       .then((data) => {
         setCards(data);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.log(err))
+      .finally(() => {});
+    }
+  }, [loggedIn]);
 
   //управление статусом лайка карточки
   function handleCardLike(card) {
@@ -140,13 +151,16 @@ function App() {
 
   //получение данных пользователя и их установка
   React.useEffect(() => {
-    api
+    if (loggedIn) {
+      api
       .getUserData()
       .then((data) => {
         setCurrentUser(data);
       })
-      .catch((err) => console.log(err));
-  }, []);
+      .catch((err) => console.log(err))
+      .finally(() => {});
+    }
+  }, [loggedIn]);
 
   //обновление и сохранение данных пользователя через попап
   function handleUpdateUserData(userData) {
